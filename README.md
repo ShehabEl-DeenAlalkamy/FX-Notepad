@@ -36,14 +36,14 @@ JRE 8 or higher.
 
     • About Notepad.
 
-# Built With
+## Built With
 
     • Java & JavaFX.
 
-# Usage
+## Usage
 
  • Run NotePad.class file.
 
-# Authors
+## Authors
    
    [Shehab El-Deen Alalkamy](https://github.com/ShehabEl-DeenAlalkamy)
