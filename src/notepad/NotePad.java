@@ -200,28 +200,28 @@ public class NotePad extends Application {
             }
         });
         //2-Cut Item
-        editMenuItems[1].setOnAction(new EventHandler<ActionEvent>() {
+        editMenuItems[2].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {               
                 notepadBody.cut();
             }
         });
         //3-Copy Item
-        editMenuItems[2].setOnAction(new EventHandler<ActionEvent>() {
+        editMenuItems[3].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {               
                 notepadBody.copy();
             }
         });
         //4-Paste Item
-        editMenuItems[3].setOnAction(new EventHandler<ActionEvent>() {
+        editMenuItems[4].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {                
                 notepadBody.paste();
             }
         });
         //5-Delete Item
-        editMenuItems[4].setOnAction(new EventHandler<ActionEvent>() {
+        editMenuItems[5].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {                
                 //assigning selection range
@@ -235,7 +235,7 @@ public class NotePad extends Application {
             }
         });
         //6-Select All Item
-        editMenuItems[5].setOnAction(new EventHandler<ActionEvent>() {
+        editMenuItems[7].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 notepadBody.selectAll();
