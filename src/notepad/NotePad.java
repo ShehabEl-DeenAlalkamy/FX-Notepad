@@ -20,7 +20,6 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
@@ -30,7 +29,6 @@ import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -40,15 +38,15 @@ import javafx.stage.Stage;
  */
 public class NotePad extends Application {
 
-    BorderPane notepadLayout;
-    TextArea notepadBody;
-    MenuBar topMenuBar;
-    Menu file, edit, format, view, help;
-    MenuItem[] fileMenuItems, editMenuItems, formatMenuItems, viewMenuItems, helpMenuItems;
-    Label footer;
-    Scene scene;
-    FileChooser fileChooser;
-    Desktop desktop = Desktop.getDesktop();
+    private BorderPane notepadLayout;
+    private TextArea notepadBody;
+    private MenuBar topMenuBar;
+    private Menu file, edit, format, view, help;
+    private MenuItem[] fileMenuItems, editMenuItems, formatMenuItems, viewMenuItems, helpMenuItems;
+    private Label footer;
+    private Scene scene;
+    private FileChooser fileChooser;
+    private final Desktop desktop = Desktop.getDesktop();
 
     @Override
     public void init() {
@@ -162,8 +160,9 @@ public class NotePad extends Application {
             public void handle(ActionEvent event) {
                 if (notepadBody.getText().isEmpty() == false) {
                     saveChanges(primaryStage, true);
-                } else
+                } else {
                     primaryStage.close();
+                }
             }
         });
 
@@ -325,10 +324,11 @@ public class NotePad extends Application {
             }
         } else if (result.get() == doNotSave) {
             // ... user chose "Don't Save"
-            if(exit == true)
+            if (exit == true) {
                 stage.close();
-            else
+            } else {
                 notepadBody.clear();
+            }
         } else if (result.get() == cancel) {
             // ... user chose "Cancel"
         }
