@@ -34,18 +34,29 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author LENOVO
+ * @author Shehab El-Deen Alalkamy
  */
-public class NotePad extends Application {
+public class FXNotePad extends Application {
 
     private BorderPane notepadLayout;
     private TextArea notepadBody;
     private MenuBar topMenuBar;
-    private Menu file, edit, format, view, help;
-    private MenuItem[] fileMenuItems, editMenuItems, formatMenuItems, viewMenuItems, helpMenuItems;
+
+    private Menu file;
+    private Menu edit;
+    private Menu format;
+    private Menu view;
+    private Menu help;
+    
+    private MenuItem[] fileMenuItems;
+    private MenuItem[] editMenuItems;
+    private MenuItem[] helpMenuItems;
+    
     private Label footer;
     private Scene scene;
+    
     private FileChooser fileChooser;
+    
     private final Desktop desktop = Desktop.getDesktop();
 
     @Override
@@ -261,8 +272,7 @@ public class NotePad extends Application {
         try {
             desktop.open(file);
         } catch (IOException ex) {
-            Logger.getLogger(
-                    NotePad.class.getName()).log(
+            Logger.getLogger(FXNotePad.class.getName()).log(
                     Level.SEVERE, null, ex
             );
         }
@@ -275,7 +285,7 @@ public class NotePad extends Application {
             writer.println(content);
             writer.close();
         } catch (IOException ex) {
-            Logger.getLogger(NotePad.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FXNotePad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
